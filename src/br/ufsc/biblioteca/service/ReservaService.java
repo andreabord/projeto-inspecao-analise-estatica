@@ -19,8 +19,10 @@ public class ReservaService {
 
         if (livro.isDisponivel()) {
             reservas.add(new Reserva(livro, usuario));
+            System.out.println("Reserva realizada para " + usuario.getNome());
             return true;
         }
+        System.out.println("Reserva não realizada");
         return false;
     }
 
