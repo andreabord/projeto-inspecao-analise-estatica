@@ -17,13 +17,13 @@ public class LivroRepository {
     }
 
     public List<Livro> buscarPorAutor(String autor) {
-        List<Livro> resultado = new ArrayList<>();
+        List<Livro> resul = new ArrayList<>();
         for (Livro livro : livros) {
             if (livro.getAutor().toLowerCase().contains(autor.toLowerCase())) {
-                resultado.add(livro);
+                resul.add(livro);
             }
         }
-        return resultado;
+        return resul;
     }
 
     public List<Livro> listarTodos() { return livros; }
